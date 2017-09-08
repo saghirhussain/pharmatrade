@@ -1,0 +1,150 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="companyBackground">
+    <div class="logoBox">
+        <img src='{{ company.logo.url }}' class='img-responsive' />
+    </div>
+    <h3>{{ company.company_name }}</h3>
+    <div class="marker"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>{{ company.town }},&nbsp;{{ company.postcode }}</p></div>
+    <div class="companySocial">
+        <p id="reviewBadge">{{ review_average }}</p>&nbsp;&nbsp;
+
+        {% if review_average == 1 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+        
+        {% elif review_average == 0 %}
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+
+        {% elif review_average == 2 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+        {% elif review_average == 3 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+        {% elif review_average == 4 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+        {% elif review_average == 5 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+        {% endif %}
+
+       <p>{{ review_count }} reviews</p>
+        {% if user.is_authenticated %}
+            <p>|</p><a href="{% url 'create_review' company.id  %}">&nbsp;Leave feedback</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="companyContainer">
+    <div class="companyBox company1">
+        <div class="companyDescription">
+            <h3>Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.</p>
+        </div>
+        <div class="companyContact">
+            <h3>Contact</h3>
+            <div class="contactIcon">
+                <div class="contactIcon1"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>{{ company.tel_number }}</p></div>
+                <div class="contactIcon1"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>{{ company.website }}</p></div>
+                <div class="contactIcon1"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>{{ company.facebook }}</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="companyBox">
+         <div class="companyFeedback">
+            <h3>Feedback</h3>
+                {% for review in review_list %}
+                <div class="companyFeedbackBox">
+                    <div class="feedbackPic2 align">
+                        <img src="{{ review.user.userprofile.picture.url }}" class='img-responsive' />
+                          <div class="feedbackText2">
+                            <p>{{ review.user.userprofile.firstname }}&nbsp;{{ review.user.userprofile.secondname }}</p>
+                            {% if review.rating == 1 %}
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            {% elif review.rating == 2 %}
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            {% elif review.rating == 3 %}
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            {% elif review.rating == 4 %}
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            {% elif review.rating == 5 %}
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+
+                            {% endif %}
+                          </div>
+                    </div>
+                    <div class="companyFeedbackText">
+                        <p>{{ review.message }}</p>
+                    </div>
+               
+                </div>
+                {% endfor %}
+        </div>
+
+        <div class="companyVerification">
+            <h3>Verification</h3>
+            <div class="verficationIcons">
+               <!--  {% for key, value in review_average.items %}
+                    {{ value }}
+                {% endfor %} -->
+               <!--  {{ review_average }} -->
+                
+
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>Company no:&nbsp;{{company.co_number }}</p></div>
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>MHRA Register</p></div>
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>Something else</p></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="companyBackground">
+    <div class="logoBox">
+        <img src="{% static "img/rzm.png" %}">
+    </div>
+    <h3>RZM Pharma</h3>
+    <div class="marker"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>Keighley, BD21 8JL</p></div>
+    <div class="companySocial">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <p>|</p><a href="#">Leave feedback</a>
+    </div>
+</div>
+
+<div class="companyContainer">
+    <div class="companyBox company1">
+        <div class="companyDescription">
+            <h3>Description</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.</p>
+        </div>
+        <div class="companyContact">
+            <h3>Contact</h3>
+            <div class="contactIcon">
+                <div class="contactIcon1"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>1234567</p></div>
+                <div class="contactIcon1"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>www.rzmpharma.com</p></div>
+                <div class="contactIcon1"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>contact@rzmpharma.com</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="companyBox">
+         <div class="companyFeedback">
+            <h3>Feedback</h3>
+                <div class="companyFeedbackBox">
+                    <div class="feedbackPic2 align">
+                        <img src="{% static "img/malcolmx.jpg" %}">
+                          <div class="feedbackText2">
+                            <p>Malcolm Little</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                    <div class="companyFeedbackText">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                </div>
+
+                <div class="companyFeedbackBox">
+                    <div class="feedbackPic2 align">
+                        <img src="{% static "img/malcolmx.jpg" %}">
+                          <div class="feedbackText2">
+                            <p>Malcolm Little</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                    <div class="companyFeedbackText">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                </div>
+        </div>
+        <div class="companyVerification">
+            <h3>Verification</h3>
+            <div class="verficationIcons">
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>Companies House</p></div>
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>MHRA Register</p></div>
+                <div class="verfication1"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>Something else</p></div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+
+{% endblock %}

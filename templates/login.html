@@ -1,0 +1,85 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Pharma Trading</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet">
+    
+
+    <!-- <link href="{% static "css/forms.css" %}" rel="stylesheet"> -->
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+     
+    
+    <!-- Custom CSS -->
+    <link href="{% static "css/index2.css" %}" rel="stylesheet">
+    <link href="{% static "css/forms.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-awecome.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+     
+
+  </head>
+  <body>
+
+<div class='loginContainer'>
+  <div class='loginPic'>
+    <h1>Welcome to PharmaTrade</h1>
+    <h3>Buy and sell Pharmaceuticals</h3>
+    <a href="">Sign up</a>
+  </div>
+  <div class="loginFormContainer">
+    <img src="{% static "img/logolarge.jpg" %}" alt="logo" style='height: 40px; '>
+    <form id="signInForm" method="post">
+      {% csrf_token %}
+      <h3>Hello, Welcome back!</h3>
+      <p>Please login to you account</p>
+    	<div class="form-group">
+      	<!-- <label for="username1">Username</label> -->
+        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+      	<input type="text" name="username" class="form-control formHeight" id="username" placeholder="username">
+
+    	</div>
+    	<div class="form-group">
+      	<!-- <label for="password1">Password</label> -->
+        <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+      	<input type="password" name="password" class="form-control formHeight" id="password1" placeholder="Password">
+    	</div>
+      <a href="#">Forgot your password</a>
+    	<button id="loginbutton" type="submit">Log in</button>
+  	</form>
+
+  </div>
+
+  </div>
+</div>
+ 
+ <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+    <script src="https://use.fontawesome.com/df0e58cacb.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+  </script>
+  </body>
+  
+</html>

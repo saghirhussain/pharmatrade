@@ -1,0 +1,103 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class=pharmacyBackground>
+  <h2>Add company</h2>
+</div>
+
+  <div class="listingFormContainer">
+    <form id="listingForm" method="post">
+      {% csrf_token %}
+      <p class="formp">Logo</p>
+      {{ form.logo }}
+
+      <div class="formSection1">
+        <div class='formTest2'>
+          <p class="formp">Company name</p>
+          {{ form.company_name }}
+        </div>
+      </div>
+
+      <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Company number</p>
+          {{ form.co_number }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Segment</p>
+          {{ form.segment }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Telephone number</p>
+          {{ form.tel_number }}
+        </div>
+      </div>
+
+      <div class="formSection1">
+        <div class='formTest2'>
+          <p class="formp">Address 1</p>
+          {{ form.address1 }}
+        </div>
+      </div>
+
+       <div class="formSection1">
+        <div class='formTest2'>
+          <p class="formp">Address 2</p>
+          {{ form.address2 }}
+        </div>
+      </div>
+
+      <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Town/City</p>
+          {{ form.town }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Post code</p>
+          {{ form.postcode }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Country</p>
+          {{ form.country }}
+        </div>
+        </div>
+
+        <div class="formSection1">
+        <div class='formTest2'>
+          <p class="formp">Website address</p>
+          {{ form.website }}
+        </div>
+      </div>
+
+        <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Facebook</p>
+          {{ form.facebook }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Twitter</p>
+          {{ form.twitter }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">LinkedIn</p>
+          {{ form.linkedin }}
+
+        </div>
+
+      </div>
+
+
+    <button id="listingButton" type="submit">Save</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

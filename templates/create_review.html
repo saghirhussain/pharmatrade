@@ -1,0 +1,31 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class=pharmacyBackground>
+  <h2>Leave a review for {{ company.company_name }}</h2>
+</div>
+
+<div class="deleteFormContainer">
+  <form id="signInForm" method="post">
+    {% csrf_token %}
+
+  
+	  <p id="reviewFields">Rating</p>
+	  {{ form.rating }}
+
+	   <p id="reviewFields">Your Review</p>
+	  {{ form.message }}
+   
+
+    <input id="listingButton" type="submit" value="Post Review">
+    
+	</form>
+
+</div>
+    
+ 
+
+ {% endblock %}

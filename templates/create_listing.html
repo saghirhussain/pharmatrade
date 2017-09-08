@@ -1,0 +1,80 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class=pharmacyBackground>
+  <h2>Post a product</h2>
+</div>
+  <div class="listingFormContainer">
+    <form enctype="multipart/form-data" id="listingForm" method="post">
+      {% csrf_token %}
+      <p class="formp">Product Photo</p>
+      {{ form.picture }}
+
+      <div class="formSection1">
+        <div class='formTest2'>
+          <p>Product name</p>
+          {{ form.product }}
+          <!-- <input type="text" name="product" id="id_input" class="form-control formHeight leftPadding" > -->
+        </div>
+      </div>
+
+      <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Type</p>
+          {{ form.product_type }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Strength</p>
+          {{ form.product_strength }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Quantity</p>
+          {{ form.quantity }}
+        </div>
+      </div>
+
+
+      <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Expiry</p>
+          <input type="date" name="expiry_date" class="form-control formHeight leftPadding" >
+          <!-- {{ form.expiry_date }} -->
+        </div>
+        <div class='formTest'>
+          <p class="formp">On floor</p>
+          {{ form.on_floor }}
+        </div>
+        <div class='formTest'>
+          <p class="formp">Delivery</p>
+          {{ form.delivery }}
+        </div>
+
+      </div>
+
+    <div class="formSection1">
+      <div class="formTest">
+        <p class="formp">Origin</p>
+        {{ form.origin }}
+      </div>
+
+      <div class="formTest">
+        <p class="formp">COA</p>
+        {{ form.coa }}
+      </div>
+
+      <div class="formTest">
+        <p class="formp">Barcode</p>
+        {{ form.barcode }}
+      </div>
+    </div>
+
+    <button id="listingButton" type="submit">Post listing</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

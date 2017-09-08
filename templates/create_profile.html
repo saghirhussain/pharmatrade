@@ -1,0 +1,70 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class='pharmacyBackground'>
+  <h2>Update profile</h2>
+  <div class="profileEdit">
+    {% if userprofile.picture %}
+      <img src='{{ userprofile.picture.url }}' class='img-responsive newPitchPic' />
+    {% else %}
+      <i class="fa fa-user" aria-hidden="true"></i>           
+    {% endif %} 
+  </div>
+</div>
+
+
+
+  <div class="listingFormContainer">
+  
+    <form enctype="multipart/form-data" id="listingForm" method="post">
+      {% csrf_token %}
+      <p class="formp">Picture</p>
+      {{ form.picture }}
+
+      <div class="formSection1">
+        <div class='formTest3'>
+          <p class="formp">First name</p>
+          {{ form.firstname }}
+        </div>
+
+        <div class='formTest3'>
+          <p class="formp">Second name</p>
+          {{ form.secondname }}
+        </div>
+      </div>
+
+
+      <div class="formSection1">
+        <div class='formTest2'>
+          <p class="formp">Company</p>
+          {{ form.company }}
+          <p id="companyNew">Company not on here?</p><a href="{% url 'create_company' %}">Add new</a>
+        </div>
+      </div>
+
+      <div class="formSection1">
+        <div class='formTest'>
+          <p class="formp">Type</p>
+          {{ form.user_type }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Gender</p>
+          {{ form.gender }}
+        </div>
+
+        <div class='formTest'>
+          <p class="formp">Country</p>
+          {{ form.country }}
+        </div>
+      </div>
+
+
+    <button id="listingButton" type="submit">Save</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

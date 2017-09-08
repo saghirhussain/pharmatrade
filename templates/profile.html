@@ -1,0 +1,101 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="companyBackground">
+    <div class="logoBox nopadding">
+        {% if user_profile.picture %}
+            <img src='{{ user_profile.picture.url }}' class='img-responsive newPitchPic' />
+        {% else %}
+            <i class="fa fa-user" aria-hidden="true"></i>           
+        {% endif %} 
+        
+    </div>
+    <h3>{{ user_profile.firstname }}&nbsp;{{ user_profile.secondname }}</h3><a href="{% url 'update_profile' user_profile.id %}">|&nbsp;&nbsp;&nbsp;Edit</a>
+    <div class="marker"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<p>{{ user_profile.company.company_name }},&nbsp;&nbsp;{{ user_profile.company.town }}</p></div>
+
+    <div class="companySocial">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </div>
+</div>
+
+<div class="companyContainer">
+    <div class="companyBox company1">
+        <div class="companyDescription">
+            <h3>Active Listings</h3>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Listing</th>
+                    <th>Date posted</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                {% for listing in user_listings %}
+                    {% if listing.is_live == True %}
+                <tbody>
+                  <tr>
+                    <td>{{ listing.product }}</td>
+                    <td>{{ listing.listing_created }}</td>
+                    <td><a class="iconLink" href="{% url 'update_listing' listing.id %}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="iconLink" href="{% url 'delete_listing' listing.id %}">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="iconLink" href="{% url 'listing_retire' listing.id %}">End Listing</a></td>
+                  </tr>
+                </tbody>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+        <div class="companyContact">
+            <h3>Key Information</h3>
+            <div class="contactIcon">
+                <div class="contactIcon1"><i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<p>Joined on {{ date }}</p></div>
+                <div class="contactIcon1"><i class="fa fa-tags" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<p>{{ listing_count }} listings posted</p></div>
+                <div class="contactIcon1"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<p>{{ user.email }}</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="companyBox company1 company2">
+        <div class="companyDescription">
+            <h3>Expired Listings</h3>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Listing</th>
+                    <th>Date posted</th>
+                    <th>Date ended</th>
+                  </tr>
+                </thead>
+
+                {% for listing in user_listings %}
+                    {% if listing.is_live == False %}
+                <tbody>
+                  <tr>
+                    <td>{{ listing.product }}</td>
+                    <td>{{ listing.listing_created }}</td>
+                    <td>{{ listing.end_date }}</td>
+                  </tr>
+                </tbody>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+        
+    </div>
+
+
+
+   
+</div>
+
+
+<!-- Get the foreign key value from companies -->
+<!--  <h4>{{ user_profile.company.company_name }}</h4>
+ <h4>{{ user_profile.user_type }}</h4>
+ <h4>{{ user_profile.id }}</h4> -->
+
+{% endblock %}

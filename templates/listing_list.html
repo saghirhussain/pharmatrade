@@ -1,0 +1,118 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+  <!-- {% for listing in object_list %} 
+    <img  class="img-responsive watch-right" src='{{ listing.picture.url }}'/>
+    {{ listing.product }}
+    {{ listing.expiry_date }}
+  {% endfor %} -->
+
+<div class="listingContainer">
+  <div class="listingBackground">
+    <h2>Product Listings</h2>
+  </div>
+  <div class="row">
+    
+    <div class="col-md-12 listingSummary">
+    <div class=
+        <form id="search-box" method="get" action="/search/">
+          {% csrf_token %}
+          <input id="searchInput"  type="text" placeholder="What product are you looking for?" name="search" value="" size="50"/>
+            
+        </form>
+
+        <form id="filterBox" method="get" action="/filter/">
+            {% csrf_token %}
+            
+            <select class="select industryBox" name="industry">
+              <option value="all">Origin</option>
+              <option value="AGR">Agriculture</option>
+              <option value="MED">Media</option>
+              <option value="LFS">Life Sciences</option>
+            </select>
+           
+            
+            <!-- <label for="myDate">When are you available this summer?</label> -->
+            <!-- <input type="date" min="2013-06-01" max="2013-08-31" id="myDate"> -->
+        </form>
+
+      <button type="submit">Find</button>
+
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 listingMiddleBox">
+      <div class="row">
+
+        <div class="col-md-2 productListPic">
+           <img src="{% static "img/Lipitor-Review.png" %}" alt="product">
+        </div>
+        <div class="col-md-7 productListSummary">
+          <h3>LIPITOR</h3>
+          <div class="productSummary">
+            <p>A brief description here would do</p>
+            <a href="{% url 'email' %}">Email</a>
+          </div>
+          <div id="productInfo">
+            <div><i class="fa fa-calendar-o" aria-hidden="true"></i><p>&nbsp;&nbsp;  31 Aug 17</p></div>
+            <div><i class="fa fa-shopping-basket" aria-hidden="true"></i><p>&nbsp;&nbsp; 1000</p></div>
+            <div><i class="fa fa-globe" aria-hidden="true"></i><p>&nbsp;&nbsp; Germany</p></div>
+            <div><i class="fa fa-eur" aria-hidden="true"></i><p>&nbsp;&nbsp; Enquire</p></div>
+          </div>
+          <img src="{% static "img/malcolmx.jpg" %}" alt="profile" style="width:35px;height:35px;">
+          <p id="listingUser">Posted by <b>Malcolm</b></p>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-3 productListAction">
+          <a href="#">ENQUIRE</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 productListPic">
+           <img src="{% static "img/Lipitor-Review.png" %}" alt="product">
+        </div>
+        <div class="col-md-7 productListSummary">
+          <h3>LIPITOR</h3>
+          <div class="productSummary">
+            <p>A brief description here would do</p>
+          </div>
+          <div id="productInfo">
+            <p><b>Expiry date:</b>&nbsp;&nbsp;  31 Aug 17</p>
+            <p><b>Quantity:</b>&nbsp;&nbsp; 1000</p>
+            <p><b>Country:</b>&nbsp;&nbsp; Germany</p>
+          </div>
+          <img src="{% static "img/malcolmx.jpg" %}" alt="profile" style="width:35px;height:35px;">
+          <p id="listingUser">Posted by <b>Malcolm</b></p>
+        </div>
+        <div class="col-md-3 productListAction">
+          <a href="#">ENQUIRE</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  </div>
+
+</div>
+
+{% for listing in object_list %}
+
+  <p>{{ listing.user }}</p>
+  <p>{{ listing.product }}</p>
+  <a  href="{{ listing.get_absolute_url }}">{{ listing.product }}</a>
+  <img src='{{ listing.picture.url }}' class='img-responsive' />
+
+{% endfor %}
+
+{% endblock %} 

@@ -1,0 +1,131 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+  <!-- {% for listing in object_list %} 
+    <img  class="img-responsive watch-right" src='{{ listing.picture.url }}'/>
+    {{ listing.product }}
+    {{ listing.expiry_date }}
+  {% endfor %} -->
+
+<div class="listingBackground">
+  <h2>Company Listings</h2>
+</div>
+
+<div class="listingBottom">
+
+
+<div class=filterContainer2>
+  <form  class="listingForM" method="get" action="/search-company/">
+        {% csrf_token %}
+        <input class="searchBox" type="text" placeholder="What company are you looking for?" name="search" value="" size="50"/>
+          
+    </form>
+  <form  class="listingForm companysearch" method="get" action="/filter-company/">
+          {% csrf_token %}
+          
+          <select class="select originBox2" name="origin">
+            <option value="all">Country</option>
+            <option value="all">All</option>
+            <option value="FRA">France</option>
+            <option value="GER">Germany</option>
+            <option value="SPA">Spain</option>
+            <option value="SWZ">Switzerland</option>
+            <option value="UK">UK</option>
+          </select>
+
+           <select class="select originBox2" name="type">
+            <option value="all">Type</option>
+            <option value="all">All</option>
+            <option value="PHA">Pharmacy</option>
+            <option value="WHL">Wholesaler</option>
+          </select>
+
+          <button type="submit">Find</button>
+    </form>
+</div>
+
+
+<div class="listingContainer">
+  {% for company in object_list %}  
+  <div class="listingBox">
+    <div class="listingPic listingPic2">
+      <img src='{{ company.logo.url }}' class='img-responsive' />
+    </div>
+    <div class="listingDetail listingDetail2">
+      <div class="upperInfo">
+        <div class="listingText2">
+          <a  href="{% url 'company_detail' company.id %}">{{ company.company_name }}</a>
+          
+          <div class="feedbackText2">
+        
+            {% if company.average_review == 1 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% elif company.average_review == 2 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% elif company.average_review == 3 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% elif company.average_review == 4 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% elif company.average_review == 5 %}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            {% endif %}
+            <p id="reviewcount">{{ company.review_count }} reviews</p>
+          </div>
+          <div class="listingBlurb">
+            <p>A brief product description of the company</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="lowerInfo lowerInfo2">
+        <div><i class="fa fa-calendar-o" aria-hidden="true"></i><p>&nbsp;&nbsp;  {{ company.profile_created }}</p></div>
+        <div><i class="fa fa-shopping-basket" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ company.get_segment_display }}</p></div>
+        <div><i class="fa fa-globe" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ company.get_country_display }}</p></div>
+      </div>
+    </div>
+    <div class="listingEnquire">
+      <a href="{% url 'company_detail' company.id %}">Details</a>
+      
+    </div>
+
+
+  </div> <!-- listing container -->
+
+  
+  {% endfor %}
+
+
+
+</div> <!-- listing container-->
+</div> <!-- listing bottom -->
+
+
+
+
+<!-- Modal -->
+
+{% endblock %} 

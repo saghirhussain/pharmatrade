@@ -1,0 +1,137 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Pharma Trading</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet">
+    
+
+    <!-- <link href="{% static "css/forms.css" %}" rel="stylesheet"> -->
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+     
+    
+    <!-- Custom CSS -->
+    <link href="{% static "css/index2.css" %}" rel="stylesheet">
+    <link href="{% static "css/listing.css" %}" rel="stylesheet">
+    <link href="{% static "css/forms.css" %}" rel="stylesheet">
+    <link href="{% static "css/listing_detail.css" %}" rel="stylesheet">
+    <link href="{% static "css/profile.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-awecome.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+
+     
+
+  </head>
+  <body>
+  
+  <div class='navigation'>
+	<img id="menuLogo" src="{% static "img/logolarge.jpg" %}" alt="logo" style='height: 40%; '>
+  <div class="menuMiddle">
+    <a id="middleLink" href="{% url 'listing_list' %}" >Product Listings</a>
+    <a id="middleLink" href="{% url 'company_list' %}" >Companies</a>
+  </div>
+	<div class="menuRight">
+		<a href="{% url 'create_listing' %}" id="productLink">Post a Product</a>
+    
+		{% if user.is_authenticated %}
+			{% if user.userprofile.picture %}
+				<img src='{{ user.userprofile.picture.url }}'  />
+        <div class="dropdown">
+          <p class="dropbtn">{{ user.userprofile.firstname }}</p>
+          <div class="dropdown-content">
+            <a href="{% url 'user_profile' %}">Profile</a>
+            <a href="{% url 'logout' %}">Logout</a>
+          </div>
+        </div>
+        <span class="caret"></span>
+        
+			{% else %}
+				<i class="fa fa-user-circle-o fa" style="font-size: 30px;" aria-hidden="true"></i>
+        <div class="dropdown">
+          <p class="dropbtn">{{ user.userprofile.firstname }}</p>
+          <div class="dropdown-content">
+            <a href="{% url 'user_profile' %}">Profile</a>
+            <a href="{% url 'logout' %}">Logout</a>
+          </div>
+        </div>
+        <span class="caret"></span>
+			{% endif %}
+		{% else %}
+	  		<a href="{% url 'signup' %}">Sign up</a>
+			 <a href="{% url 'login' %}">Log in</a>
+  		{% endif %}
+
+		
+	</div>
+  </div>
+  
+  {% block content %}
+  <div class='landingpage'>
+
+  	<h1>Buy and Sell<br>Pharmaceuticals</h1>
+  	<h4>An online marketplace for pharmacuetical products, <br>wholesalers, manufacturers and traders</h4>
+  	<form>
+  		<input id='searchbox' type="text" name="search" placeholder="What product are you looking for?">
+  		<button id='landingbutton'>Search</button>
+  	</form>
+  </div>
+  {% endblock %}
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+  	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+  	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  	<script src="https://use.fontawesome.com/df0e58cacb.js"></script>
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+	  $( function() {
+	    $( "#datepicker" ).datepicker();
+	  } );
+  </script>
+  
+  <script>
+    jQuery(function() {
+    $("#id_input").on('keyup', function(){
+        var value = $(this).val();
+        $.ajax({
+            url: "{% url 'ajax_autocomplete' %}",
+            data: {
+              'search': value 
+            },
+            dataType: 'json',
+            success: function (data) {
+                list = data.list;
+                $("#id_input").autocomplete({
+                source: list,
+                minLength: 3 
+                });       
+            }
+        });        
+    });
+  });
+  </script>
+
+  </body>
+  
+</html>
+

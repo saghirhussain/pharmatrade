@@ -1,0 +1,33 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="listingBackground">
+  <h2>Send email to {{ recepient_firstname }} from {{ recepient_company }} about {{ listing.product.product_name }}</h2>
+</div>
+
+
+
+<div class="deleteFormContainer">
+  <form id="signInForm" method="get" action=/email/>
+    {% csrf_token %}
+
+  
+	 <p id="reviewFields">To</p>
+	 <input type="text" name="recepient" value="{{ recepient }}" class="form-control formHeight leftPadding review" id="username" placeholder="{{ recepient }}">
+
+	 <p id="reviewFields">Your Message</p>
+	  <textarea rows="10" type="text" name="message" class="form-control formHeight review leftPadding" ></textarea>  
+   
+
+    <input id="listingButton" type="submit" value="Send">
+    
+	</form>
+
+</div>
+    
+
+
+ {% endblock %}

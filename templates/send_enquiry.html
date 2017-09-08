@@ -1,0 +1,30 @@
+{% extends "index2.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class=pharmacyBackground>
+  <h2>Send message</h2>
+</div>
+
+<div class="listingFormContainer">
+  
+  <form id="signInForm" method="post">
+    {% csrf_token %}
+  	<div class="form-group">
+    	<!-- <label for="username1">Username</label> -->
+    	<input type="text" name="username" class="form-control formHeight" id="username" placeholder="Email">
+  	</div>
+  	<div class="form-group">
+    	<!-- <label for="password1">Password</label> -->
+    	<input type="password" name="password" class="form-control formHeight" id="password1" placeholder="Password">
+  	</div>
+  	<button id="loginbutton" type="submit">Sign In</button>
+	</form>
+
+</div>
+    
+ 
+
+ {% endblock %}
