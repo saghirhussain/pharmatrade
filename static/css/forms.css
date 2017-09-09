@@ -1,0 +1,352 @@
+
+
+#signInForm {
+	margin: auto;
+	background-color: white;
+	width: 550px;
+	padding: 30px 30px;
+	border-radius: 3px;
+
+}
+
+#signInForm h3 {
+	margin-top: 50px;
+	font-family: 'ProximaNovaBold';
+	font-size: 30px;
+
+}
+
+#signInForm p {
+	margin-bottom: 100px;
+	font-family: 'ProximaNovaRegular';
+	font-size: 18px;
+	color: #8f97a3;
+}
+
+#titleSignForm {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	color: #333333;
+	border-bottom: 1px solid #e6e6e6;
+	
+}
+
+#loginbutton {
+	height: 50px;
+	width: 200px;
+	background-color: #00bfff;
+	border-radius: 5px;
+	border: none;
+	font-family: 'ProximaNovaRegular';
+	color: white;
+	margin-top: 20px;
+	margin-left: 290px;
+}
+
+#loginbutton:hover {
+	background-color: #4dd2ff;
+}
+
+.formHeight {
+	height: 65px;
+	box-shadow: none;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	padding-left: 60px;
+	border: 1px solid #d9d9d9;
+
+}
+
+.leftPadding {
+	padding-left: 20px;
+
+}
+
+.formHeight input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group input::placeholder {
+  color: #bfbfbf;
+  font-family: 'ProximaNovaRegular';
+}
+
+.form-group {
+	position: relative;
+}
+
+.loginFormContainer a {
+	color: #00bfff;
+	display: block;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.form-group .fa-envelope-o {
+	color: #999999;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.form-group .fa-lock {
+	color: #999999;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.form-group .fa-user-o {
+	color: #999999;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-size: 20px;
+}
+
+
+
+.loginPic {
+	
+background-image: url('../img/login.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 55%;
+text-align: center;
+    
+}
+
+.loginPic h1 {
+	font-family: 'ProximaNovaBold';
+	font-size: 50px;
+	color: white;
+	text-align: center;
+	margin-top: 300px;
+}
+
+.loginPic h3 {
+	font-family: 'ProximaNovaLight';
+	color: white;
+	text-align: center;
+	font-size: 35px;
+}
+
+
+.loginPic a {
+	margin-top: 40px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'ProximaNovaSemiBold';
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 50px;
+	font-size: 18px;
+	border: solid 2px white;
+}
+
+.loginPic a:hover {
+	background-color: white;
+	color: #60AAD1;
+}
+
+
+
+.loginContainer {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+
+}
+
+.loginFormContainer img {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+.loginFormContainer {
+	
+	width: 45%;
+
+}
+
+.loginFormContainer img {
+	margin-top: 70px;
+}
+
+.listingFormContainer {
+	background-color: #f2f2f2;
+	padding-top: 80px;
+}
+
+#listingForm {
+	width: 71%;
+	background-color: white;
+	border-radius: 5px;
+	margin: auto;
+	padding: 40px 200px;
+	
+}
+
+#listingForm p {
+	font-family: 'ProximaNovaSemiBold';
+	color: #808080;
+}
+
+.signupfield {
+	margin-bottom: 10px;
+}
+
+
+.formp {
+	margin-top: 10px;
+
+}
+
+.formTest {
+	width: 30%;
+
+}
+
+.formTest2 {
+	width: 100%;
+}
+
+.formTest3 {
+	width: 45%;
+}
+
+.formSection1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.formProduct {
+	border: 1px dashed #808080;
+	padding: 10px;
+}
+
+#listingButton {
+	font-size: 16px;
+	font-family: 'ProximaNovaRegular';
+	font-weight: bold;
+	padding: 25px 50px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: white;
+	background-color:  #00bfff;
+
+}
+
+#listingButton:hover {
+	background-color: #4dd2ff;
+}
+
+.pharmacyBackground {
+	height: 230px;
+	background-image: url('../img/bg-company-profile.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: -20px;
+}
+
+
+
+.pharmacyBackground h2,
+.pharmacyBackground2 h2 {
+	font-family: 'ProximaNovaSemiBold';
+	color: white;
+	padding-left: 250px;
+	padding-top: 110px;
+}
+
+#companyNew {
+	color: #00bfff;
+	display: inline-block;
+	margin-top: -10px;
+}
+
+.formTest2 a {
+	display: inline-block;
+	font-family: 'ProximaNovaRegular';
+	text-decoration: none;
+	color: #00bfff;
+	margin-left: 20px;
+}
+
+.formTest2 a:hover {
+	font-weight: bold;
+}
+
+
+.profileEdit {
+	height: 170px;
+	width: 160px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	left: 250px;
+	top: 170px;
+	box-shadow: 0px 10px 20px #bbc0c4;
+	text-align: center;
+}
+
+.logoBox .fa-user,
+.profileEdit .fa-user {
+	display: block;
+	color: #aeb3b7;
+	font-size: 100px;
+	margin-top: 25px;
+
+}
+
+.deleteFormContainer {
+	background-color: #f2f2f2;
+	height: 600px;
+	padding-top: 30px;
+}
+
+
+
+.deleteButton2 {
+	padding: 15px 30px;
+	
+	
+}
+
+.deleteButtonContainer a {
+	text-decoration: none;
+	display: inline-block;
+	background-color: #cccccc;
+	padding: 15px 30px;
+	border-radius: 5px;
+	color: black;
+	margin-top: 50px;
+	border: 1px solid #bfbfbf;
+	margin-right: 50px;
+
+}
+
+.deleteButtonContainer a:hover {
+	background-color: #999999;
+	color: white;
+}
+
+
+#reviewFields {
+	margin-bottom: 0px;
+}
+
+.review {
+	margin-top: -80px;
+}

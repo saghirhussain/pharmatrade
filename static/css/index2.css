@@ -1,0 +1,481 @@
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../fonts/ProximaNovaRegular.otf');
+  
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('../fonts/ProximaNovaBold.otf');
+  
+}
+
+@font-face {
+  font-family: 'ProximaNovaSemiBold';
+  src: url('../fonts/ProximaNovaSemiBold.otf');
+  
+}
+
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('../fonts/ProximaNovaLight.otf');
+  
+}
+
+
+
+body, html {
+  height: 100%;
+}
+
+.navigation {
+	
+	height: 10%;
+	padding-left: 100px;
+	padding-right: 100px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+}
+
+.navigation h3 {
+	display: block;
+	margin-top: 20px;
+	padding-top: 10px;
+	
+}
+
+.navigation img {
+	margin-top: 20px;
+}
+
+.navigation a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-top: 20px;
+	color: #465563;
+}
+
+.navigation a:hover {
+	color: #00bfff;
+}
+
+
+
+.landingpage {
+	
+	height: 90%;
+	background-image: url('../img/bg-landingpage.jpg');
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.landingpage h1 {
+	padding-top: 80px;
+	font-size: 40px;
+	font-family: 'ProximaNovaSemiBold';
+	color: #465563;
+}
+
+.landingpage h1, h4 {
+	
+	line-height: 150%;
+	padding-left: 20%;
+	
+}
+
+.landingpage h4 {
+	line-height: 200%;
+	margin-bottom: 100px;
+	font-family: 'ProximaNovaRegular';
+	color: #8f97a3;
+}
+
+#productLink {
+	margin-right: 100px;
+	color: #00bfff;
+	border: solid 2px #00bfff;
+	border-radius: 5px;
+}
+
+#productLink:hover {
+	background-color: #00bfff;
+	color: white;
+}
+
+#searchbox {
+	height: 110px;
+	padding: 40px;
+	width: 530px;
+	background-color: transparent;
+	border-style: none;
+	border-radius: 5px;
+	margin-left: 0px;
+	display: inline-block;
+	
+}
+
+#middleLink {
+	text-transform: uppercase;
+
+}
+
+
+#searchbox::placeholder {
+	color: white;
+}
+
+#searchbox:focus {
+	outline-width: 0;
+	color: white;
+}
+
+.landingpage form {
+	margin-left: 20%;
+	width: 700px;
+	background-color: #00bfff;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px #bbc0c4;
+
+}
+
+#landingbutton {
+	padding: 15px 40px;
+	background-color: white;
+	color: #00bfff;
+	border-style: none;
+	border-radius: 100px;
+
+}
+
+#landingbutton:hover {
+	background-color: #465563;
+	color: white;
+}
+
+
+.companyBackground {
+	height: 230px;
+    background: url('../img/bg-company-profile.jpg');
+	background-repeat: no-repeat;
+    /*background-position: 50% 160%; */
+    background-size: cover;
+    position: relative;
+    
+}
+
+.companyContainer {
+	background-color: #f2f2f2;
+	min-height: 600px;
+	margin-top: -20px;
+
+}
+
+.companyBox {
+	display: flex;
+	flex-direction: row;
+	width: 75%;
+	margin: auto;
+	padding-top: 100px;
+	padding-left: 30px;
+}
+
+.companyDescription,
+.companyFeedback {
+	margin-right: 20px;
+}
+
+#reviewBadge {
+	display: inline-block;
+	padding: 3px 7px;
+	border-radius: 3px;
+	background-color: #F9A523;
+	margin-left: 0px;
+}
+
+.companyContact,
+.companyDescription,
+.companyFeedback,
+.companyVerification {
+	background-color: white;
+	height: 300px;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.companyDescription,
+.companyFeedback {
+	width: 65%;
+}
+
+.companyContact,
+.companyVerification {
+	width: 25%;
+}
+
+.companyDescription h3,
+.companyContact h3,
+.companyFeedback h3,
+.companyVerification h3
+ {
+	font-family: 'ProximaNovaBold';
+	border-bottom: solid 1px #e6e6e6;
+	padding-bottom: 20px;
+	color: #676E73;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+.company1 {
+	padding-top: 110px;
+}
+
+.company2 {
+	padding-top: 30px;
+}
+
+.companyFeedback,
+.companyVerification {
+	margin-top: -60px;
+}
+
+.logoBox {
+	height: 170px;
+	width: 200px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	left: 250px;
+	top: 100px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0px 10px 20px #bbc0c4;
+}
+
+.logoBox img {
+	max-width: 99%;
+	
+}
+
+.companyBackground h3 {
+	font-family: 'ProximaNovaBold';
+	color: white;
+	padding-left: 500px;
+	padding-top: 100px;
+	display: inline-block;
+}
+
+.companyBackground a {
+	display: inline-block;
+	padding-left: 20px;
+	font-family: 'ProximaNovaLight';
+	color: white;
+}
+
+.market {
+	display: block;
+}
+
+.companyBackground .fa-map-marker {
+	display: inline-block;
+	margin-left: 500px;
+	color: #00bfff;
+	font-size: 18px;
+}
+
+.companyBackground p {
+	font-family: 'ProximaNovaLight';
+	color: white;
+	display: inline-block;
+	
+}
+
+.companySocial {
+	margin-left: 500px;
+	
+}
+
+.companySocial p {
+	margin-left: 10px;
+}
+
+.companySocial .fa-linkedin,
+.companySocial .fa-facebook,
+.companySocial .fa-twitter {
+	font-size: 18px;
+	color: white;
+	margin-right: 40px;
+}
+
+.contactIcon1 {
+	margin-top: 20px;
+}
+
+.contactIcon1 .fa-phone,
+.contactIcon1 .fa-globe,
+.contactIcon1 .fa-envelope,
+.contactIcon1 .fa-calendar-o,
+.contactIcon1 .fa-tags
+ {
+	font-size: 20px;
+	color: #545a5f;
+}
+
+.contactIcon1 p {
+	display: inline-block;
+	font-family: 'ProximaNovaSemiBold';
+	color: #676E73;
+}
+
+.contactIcon {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.companyDescription p {
+	padding-top: 20px;
+	line-height: 200%;
+	font-family: 'ProximaNovaRegular';
+	color: #676E73;
+}
+
+.companyFeedbackBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.companyFeedbackText {
+	width: 65%;
+	padding-top: 30px;
+	
+}
+
+.companyFeedbackText p {
+	font-style: italic;
+	font-family: 'ProximaNovaLight';
+	color: #676E73;
+}
+
+.verfication1 {
+	display: flex;
+	flex-direction: row;
+
+}
+
+.verficationIcons {
+	display: flex;
+	height: 40%;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 30px;
+	
+}
+
+
+.align {
+	margin-top: -20px;
+}
+
+.verfication1 .fa-check-circle {
+	font-size: 26px;
+	color: #75EB96;
+}
+
+.verfication1 p {
+	display: inline-block;
+	font-family: 'ProximaNovaSemiBold';
+	color: #676E73;
+}
+
+
+
+.nopadding {
+	padding: 0px;
+	width: 160px;
+}
+
+.table-hover th {
+	font-family: 'ProximaNovaSemiBold';
+	color: #676E73;
+}
+
+.table-hover td {
+	font-family: 'ProximaNovaRegular';
+	color: #676E73;
+}
+
+td a {
+	text-decoration: none;
+	color: #676E73;
+}
+
+.menuRight a {
+	font-family: 'ProximaNovaSemiBold';
+	color: #676E73;
+}
+
+.menuRight img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-top: 0px;
+}
+
+#messageIcon {
+	margin-right: 30px;
+}
+
+#enquirySent {
+	font-family: 'ProximaNovaSemiBold';
+	color: #808080;
+	padding-left: 250px; 
+}
+
+.dropbtn {
+    font-family: 'ProximaNovaSemiBold';
+    color: #808080;
+    padding: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: -10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #00bfff;;
+}

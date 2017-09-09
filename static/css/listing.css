@@ -1,0 +1,480 @@
+
+
+
+.listingBackground {
+    height: 230px;
+    background: url('../img/bg-search-page.jpg');
+	background-repeat: no-repeat;
+    /*background-position: 50% 160%; */
+    background-size: cover;
+
+}
+
+.listingBackground {
+	margin-top: -20px;
+}
+
+
+
+.listingBackground h2 {
+	font-family: 'ProximaNovaSemiBold';
+	color: white;
+	padding-left: 250px;
+	padding-top: 110px;
+}
+
+.listingBottom {
+	height: 1200px;
+	background-color: #f2f2f2;
+	padding-top: 50px;
+	
+}
+
+.filterContainer2,
+.listingContainer {
+	width: 70%;
+	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+	height: 130px;
+	padding: 30px 40px;
+	
+
+}
+
+.filterContainer2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+
+
+.listingContainer {
+	height: 1000px;
+	margin-top: 50px;
+	padding-top: 20px;
+
+}
+
+
+.right {
+	margin-left: 40px;
+	
+}
+
+.searchBox {
+	height: 70px;
+	background-color: #f2f2f2;
+	border: 2px solid #e6e6e6;
+	border-radius: 5px;
+	width: 500px;
+	padding-left: 40px;
+	
+
+}
+
+.searchBox::placeholder {
+  color: #bfbfbf;
+  font-family: 'ProximaNovaRegular';
+
+}
+
+.originBox {
+	height: 70px;
+	border: 2px solid #e6e6e6;
+	display: inline-block;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.originBox2 {
+	height: 70px;
+	border: 2px solid #e6e6e6;
+	display: inline-block;
+	border-radius: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.listingForm button {
+	height: 70px;
+	border-style: none;
+	background-color: #00bfff;
+	color: white;
+	font-family: 'ProximaNovaRegular';
+	border-radius: 5px;
+	padding: 25px 55px;
+
+}
+
+.listingForm button:hover {
+	background-color: #4dd2ff;
+}
+
+
+
+.companysearch {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 45%;
+}
+
+.listingBox {
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	border-bottom: solid 1px #e5e5e6;
+	margin-top: 30px;
+}
+
+.listingPic {
+	width: 20%;
+	height: 100%;
+	padding: 20px;
+	
+}
+
+.listingPic2 {
+	padding: 40px;
+}
+
+
+
+.listingDetail {
+	width: 60%;
+	height: 100%;
+	
+}
+
+.listingDetail2 {
+	padding-left: 30px;
+}
+
+.listingEnquire {
+	width: 20%;
+	height: 100%;
+	text-align: center;
+}
+
+.listingEnquire a {
+	font-family: 'ProximaNovaSemiBold';
+	background-color: white;
+	font-size: 16px;
+	color: #00bfff;
+	border: solid 2px #00bfff;
+	border-radius: 3px;
+	display: inline-block;
+	border-width: 2px;
+	padding: 10px 40px;
+	margin-top: 70px;
+	margin-left: 30%;
+	text-decoration: none;
+}
+
+#enquireButton {
+	padding: 10px 40px;
+	font-family: 'ProximaNovaSemiBold';
+	background-color: white;
+	border: solid 2px #00bfff;
+	border-radius: 3px;
+	color: #00bfff;
+	margin-left: 30%;
+}
+
+.listingEnquire a:hover,
+#enquireButton:hover {
+	background-color: #00bfff;
+	color: white;
+}
+
+
+.listingText a,
+.listingText2 a {
+	text-decoration: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'ProximaNovaSemiBold';
+	font-size: 20px;
+	padding-left: 20px;
+	color: #50525E;
+}
+
+
+.listingText2 a {
+	display: block;
+	margin-bottom: -10px;
+}
+
+.listingText p, 
+.listingText2 p {
+	font-family: 'ProximaNovaRegular';
+	padding-left: 20px;
+	padding-top: 10px;
+	color: #a6a6a6;
+}
+
+.listingText2 p {
+	margin-top: 10px;
+}
+
+.upperInfo {
+	display: flex;
+	flex-direction: row;
+	height: 60%;
+}
+
+.listingText {
+	
+	width: 50%;
+}
+
+.listingText2 {
+	width: 100%;
+}
+
+.listingFeedback {
+	
+	width: 50%:;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+.feedbackPic img {
+	display: block;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 50px;
+	width: 90px;
+	border-radius: 50%;
+
+}
+
+.feedbackText h4 {
+	font-family: 'ProximaNovaSemiBold';
+	font-size: 16px;
+	color: #898990;
+	padding-left: 0;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+#noReview {
+	display: inline-block;
+	font-family: 'ProximaNovaRegular';
+	font-size: 14px;
+	padding: 0px 10px;
+	font-weight: normal;
+}
+
+
+
+.listingBlurb {
+	margin-bottom: 20px;
+	margin-top: 10px;
+	
+}
+
+#reviewcount {
+	display: inline-block;
+}
+
+.lowerInfo {
+	
+	height: 40%;
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px
+}
+
+.lowerInfo2 {
+	justify-content: space-between;
+}
+
+.lowerInfo div {
+	margin-right: 40px;
+	margin-left: 20px;
+}
+
+.lowerInfo p {
+	display: inline-block;
+	font-family: 'ProximaNovaRegular';
+	color: #9A9CA4;
+}
+
+.listingPic img {
+	max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.fa-star,
+.fa-star-o {
+	color: #F9A523;
+}
+
+
+
+.lowerInfo .fa-calendar-o,
+.lowerInfo .fa-shopping-basket,
+.lowerInfo .fa-globe,
+.lowerInfo .fa-eur {
+	font-size: 16px;
+	color: #50525E;
+}
+
+
+.productListPic,
+.productListSummary,
+.productListAction {
+	height: 200px;
+	border-bottom: 1px solid #e6e6e6;
+	background-color: white;
+}
+
+
+.productListSummary {
+	padding-left: 50px;
+}
+
+.productListPic {
+	position: relative;
+}
+
+.productListPic img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.productListSummary p {
+	display: inline-block;
+}
+
+.productListSummary h3 {
+	/*color: #00e6e6;*/
+	color: black;
+}
+
+.productListSummary img {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+#productInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	vertical-align: bottom;
+	margin-bottom: 15px;
+
+}
+
+#productInfo p {
+	font-size: 13px;
+	font-family: 'Open Sans';
+	color: #595959;
+
+}
+
+.fa-calendar-o, 
+.fa-shopping-basket,
+.fa-globe,
+.fa-eur {
+	color: #595959;
+
+}
+
+.productSummary {
+	height: 20px;
+	margin-bottom: 20px;
+}
+
+.productSummary p {
+	color: #595959;
+}
+
+
+
+.productListAction {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.productListAction a {
+	
+	border: 1px solid #33cc33;
+	padding: 10px 20px;
+	border-radius: 20px;
+	background-color: white;
+	color: #33cc33;
+}
+
+.listingMiddleBox {
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: white;
+}
+
+#listingUser {
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.productListAction a:hover {
+	background-color: #29a329;
+	border: 1px solid #29a329;
+
+}
+
+
+
+
+#searchInput {
+	border-radius: 5px;
+	height: 45px;
+	width: 500px;
+	border-style: none;
+	padding: 20px;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	border: solid 1px lightgrey;
+}
+
+
+.modal-header h2 {
+	font-family: 'ProximaNovaRegular';
+	color: #9A9CA4;
+	display: inline-block;
+}
+
+
+
+
+
+#searchInput:focus {
+	border-color: lightblue;
+  	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  	outline: 0 none;
+}
+
+
+p {
+	font-family: 'Open Sans';
+	color: black;
+}
