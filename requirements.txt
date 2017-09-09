@@ -1,6 +1,0 @@
-Django==1.11.3
-django-directmessages==0.9.7
-django-messages==0.5.3
-olefile==0.44
-Pillow==4.2.1
-pytz==2017.2
