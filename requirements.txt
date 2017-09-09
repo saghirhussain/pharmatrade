@@ -1,0 +1,10 @@
+dj-database-url==0.4.2
+Django==1.11.3
+django-directmessages==0.9.7
+django-messages==0.5.3
+gunicorn==19.7.1
+psycopg2==2.6.2
+olefile==0.44
+Pillow==4.2.1
+pytz==2017.2
+whitenoise==3.3.0
