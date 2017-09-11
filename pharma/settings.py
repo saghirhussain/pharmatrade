@@ -162,24 +162,24 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # if need change to s3 storage then add 'pharma/' before static
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'pharma/static'), 
+]
 
-# AWS_ACCESS_KEY_ID = 'AKIAI33LHDZ43QNETJUA'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'pharmatrade'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID = 'AKIAI33LHDZ43QNETJUA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'pharmatrade'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'CacheControl': 'max-age=86400',
-# }
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
-# AWS_LOCATION = 'static'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+AWS_LOCATION = 'static'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
-# DEFAULT_FILE_STORAGE = 'pharma.storage_backends.MediaStorage'  
+DEFAULT_FILE_STORAGE = 'pharma.storage_backends.MediaStorage'  
