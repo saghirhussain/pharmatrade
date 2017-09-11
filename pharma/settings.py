@@ -184,4 +184,6 @@ STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 DEFAULT_FILE_STORAGE = 'pharma.storage_backends.MediaStorage'  
 
-AWS_QUERYSTRING_AUTH = False //This will make sure that the file URL does not have unnecessary parameters like your access key.
+AWS_QUERYSTRING_AUTH = False  
+
+# This will make sure that the file URL does not have unnecessary parameters like your access key.
