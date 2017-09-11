@@ -1,0 +1,112 @@
+.profileBackground {
+	height: 200px;
+    /*background-position: 50% 160%; */
+    background-size: cover;
+    background-position: center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/tablets2.jpg');
+     background-size: cover;
+    background-position: center center;
+	margin-bottom: 30px;
+}
+
+
+
+.red {
+	background-color: white;
+	height: 200px;
+}
+
+
+.profilePic img {
+	border-radius: 5px;
+	
+}
+
+.profileSummary h3 {
+	margin-top: 0px;
+	
+}
+
+.fa-pencil-square-o {
+	color:  #a6a6a6;
+}
+
+.profileSummary a {
+	color: #a6a6a6;
+}
+
+.profileSummary h4 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+}
+
+.fa-map-marker {
+	color: #00e6e6;
+	font-size: 16px;
+}
+
+.profileSummary p {
+	display: inline-block;
+	font-family: 'Open Sans'
+	margin-bottom: 30px;
+}
+
+#profileContact .fa-calendar-o,
+#profileContact .fa-tags,
+#profileContact .fa-envelope-o
+{
+	color: #262626;
+	font-size: 16px;
+
+}
+
+#profileContact p {
+	display: inline-block;
+	font-size: 15px;
+	font-family: 'Open Sans'
+	
+}
+
+
+
+#profileContact h3 {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+
+
+
+.profileSocial {
+	margin-top: 20px;
+	border-top: solid 1px #e6e6e6;
+}
+
+.profileListings {
+	margin-top: 40px;
+}
+
+.profileListings h3 {
+	margin-left: 10px;
+}
+
+.table-hover {
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+.iconLink {
+	text-decoration: none;
+	font-family: 'ProximaNovaRegular';
+	color: #00bfff;
+
+}
+
+.fa-pencil-square-o {
+	color: #0d0d0d;
+}
+
+.fa-minus-circle {
+	color: red;
+}
