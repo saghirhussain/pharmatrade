@@ -165,9 +165,9 @@ DATABASES['default'].update(db_from_env)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # if need change to s3 storage then add 'pharma/' before static
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 # AWS_ACCESS_KEY_ID = 'AKIAI33LHDZ43QNETJUA'
 # AWS_SECRET_ACCESS_KEY = '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'
