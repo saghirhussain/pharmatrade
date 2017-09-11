@@ -124,18 +124,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# The URL to use when referring to static files (where they will be served from)
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
-
-
-#you need to use the below code without static_root if you want to serve bootstrap locally
-STATICFILES_DIRS = [
-    os.path.join(MAIN_DIR, "static"),
-]
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(MAIN_DIR, "media")
