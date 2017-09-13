@@ -80,7 +80,9 @@ class Company(models.Model):
 	facebook = models.URLField(null=True, blank=True)
 	twitter = models.URLField(null=True, blank=True)
 	linkedin = models.URLField(null=True, blank=True)
+	is_verified = models.BooleanField(default=False)
 	profile_created = models.DateField(default=datetime.now)
+
 
 	@property
 	def average_review(self):

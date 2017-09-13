@@ -198,6 +198,10 @@ text-align: center;
 	color: #808080;
 }
 
+#listingForm button {
+	font-family: 'ProximaNovaRegular';
+}
+
 .signupfield {
 	margin-bottom: 10px;
 }

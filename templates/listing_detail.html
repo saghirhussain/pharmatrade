@@ -33,8 +33,8 @@
 				</div>
 				<div class="detailedFooter">
         			<div><i class="fa fa-shopping-basket" aria-hidden="true"></i><p>&nbsp;&nbsp; Stock: <b>{{ listing.quantity }}</b></p></div>
-        			<div><i class="fa fa-tags" aria-hidden="true"></i><p>&nbsp;&nbsp; On-floor stock: <b> {{ listing.on_floor }}</b></p></div>
-        			<div><i class="fa fa-truck" aria-hidden="true"></i><p>&nbsp;&nbsp; Delivery: <b>{{ listing.delivery }}</b></p></div>
+        			<div><i class="fa fa-tags" aria-hidden="true"></i><p>&nbsp;&nbsp; On-floor stock: <b> {{ listing.get_on_floor_display }}</b></p></div>
+        			<div><i class="fa fa-truck" aria-hidden="true"></i><p>&nbsp;&nbsp; Delivery: <b>{{ listing.get_delivery_display }}</b></p></div>
 				</div>
 			</div>
 		</div>
@@ -44,13 +44,13 @@
 			<h3>Product Information</h3>
 			
 			<div class="detailedItems"><p><b>Name:</b></p><p>{{ listing.product }}</p></div>
-			<div class="detailedItems"><p><b>Form:</b></p><p>{{ listing.product_type }}</p></div>
+			<div class="detailedItems"><p><b>Form:</b></p><p>{{ listing.get_product_type_display }}</p></div>
 			<div class="detailedItems"><p><b>Strength:</b></p><p>{{ listing.product_strength }}</p></div>
 			<div class="detailedItems"><p><b>Pack size:</b></p><p>{{ listing.quantity }}</p></div>
 			<div class="detailedItems"><p><b>Manufacturer:</b></p><p>{{ listing.product }}</p></div>
 			<div class="detailedItems"><p><b>Expiry dare:</b></p><p>{{ listing.expiry_date }}</p></div>
-			<div class="detailedItems"><p><b>Origin:</b></p><p>{{ listing.origin }}</p></div>
-			<div class="detailedItems"><p><b>CoA:</b></p><p>{{ listing.coa }}</p></div>
+			<div class="detailedItems"><p><b>Origin:</b></p><p>{{ listing.get_origin_display }}</p></div>
+			<div class="detailedItems"><p><b>CoA:</b></p><p>{{ listing.get_coa_display }}</p></div>
 			<div class="detailedItems"><p><b>Barcode:</b></p><p>{{ listing.barcode }}</p></div>
 
 		</div>

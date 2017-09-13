@@ -283,8 +283,15 @@
 	
 }
 
+..listingBlurb p {
+	font-family: 'ProximaNovaRegular';
+
+}
+
 #reviewcount {
 	display: inline-block;
+	font-family: 'ProximaNovaRegular';
+
 }
 
 .lowerInfo {
@@ -474,7 +481,4 @@
 }
 
 
-p {
-	font-family: 'Open Sans';
-	color: black;
-}
+

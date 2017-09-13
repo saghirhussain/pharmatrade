@@ -165,6 +165,8 @@ DATABASES['default'].update(db_from_env)
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # if need change to s3 storage then add 'pharma/' before static
+
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pharma/static'), 
 ]

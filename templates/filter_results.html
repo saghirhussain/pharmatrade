@@ -39,49 +39,51 @@
 </div>
 
 <div class="listingContainer">
-  {% for listing in listings %}  
-  <div class="listingBox">
-    <div class="listingPic">
-      <img src='{{ listing.picture.url }}' class='img-responsive' />
-    </div>
-    <div class="listingDetail">
-      <div class="upperInfo">
-        <div class="listingText">
-          <a  href="{% url 'listing_detail' listing.id %}">{{ listing.product }}</a>
-          <p>A brief product description of product</p>
+  {% if listings.all %}
+    {% for listing in listings %}  
+    <div class="listingBox">
+      <div class="listingPic">
+        <img src='{{ listing.picture.url }}' class='img-responsive' />
+      </div>
+      <div class="listingDetail">
+        <div class="upperInfo">
+          <div class="listingText">
+            <a  href="{% url 'listing_detail' listing.id %}">{{ listing.product }}</a>
+            <p>A brief product description of product</p>
+          </div>
+          <div class="listingFeedback">
+            <div class="feedbackPic">
+              <img src='{{ listing.user.userprofile.picture.url }}' class='img-responsive' />
+            </div>
+            <div class="feedbackText">
+              <h4>{{ listing.user.userprofile.firstname }}&nbsp;from&nbsp;{{ listing.user.userprofile.company.company_name }}</h4>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
         </div>
-        <div class="listingFeedback">
-          <div class="feedbackPic">
-            <img src='{{ listing.user.userprofile.picture.url }}' class='img-responsive' />
-          </div>
-          <div class="feedbackText">
-            <h4>{{ listing.user.userprofile.firstname }}&nbsp;from&nbsp;{{ listing.user.userprofile.company.company_name }}</h4>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-          </div>
+        <div class="lowerInfo">
+          <div><i class="fa fa-calendar-o" aria-hidden="true"></i><p>&nbsp;&nbsp;  {{ listing.expiry_date }}</p></div>
+          <div><i class="fa fa-shopping-basket" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ listing.quantity }}</p></div>
+          <div><i class="fa fa-globe" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ listing.get_origin_display }}</p></div>
+          <div><i class="fa fa-eur" aria-hidden="true"></i><p>&nbsp;&nbsp; Enquire</p></div>
+          
         </div>
       </div>
-      <div class="lowerInfo">
-        <div><i class="fa fa-calendar-o" aria-hidden="true"></i><p>&nbsp;&nbsp;  {{ listing.expiry_date }}</p></div>
-        <div><i class="fa fa-shopping-basket" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ listing.quantity }}</p></div>
-        <div><i class="fa fa-globe" aria-hidden="true"></i><p>&nbsp;&nbsp; {{ listing.get_origin_display }}</p></div>
-        <div><i class="fa fa-eur" aria-hidden="true"></i><p>&nbsp;&nbsp; Enquire</p></div>
+      <div class="listingEnquire">
+        <a href="{% url 'enquiry' listing.id %}">Enquire</a>
         
       </div>
-    </div>
-    <div class="listingEnquire">
-      <a href="{% url 'enquiry' listing.id %}">Enquire</a>
-      
-    </div>
+    </div> <!-- listing container -->
 
-
-  </div> <!-- listing container -->
-
-  
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    <h3 id="noresults">There are product listings that match your request</h3>
+    <a href="{% url 'listing_list' %}">< Go back to product listings</a>
+  {% endif %}
 
 
 </div> <!-- listing container-->

@@ -61,7 +61,13 @@
           
           <div class="feedbackText2">
         
-            {% if company.average_review == 1 %}
+             {% if company.average_review == 0 %}
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% elif company.average_review == 1 %}
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
