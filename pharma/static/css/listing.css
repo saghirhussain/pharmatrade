@@ -17,7 +17,7 @@
 
 
 .listingBackground h2 {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	color: white;
 	padding-left: 250px;
 	padding-top: 110px;
@@ -78,7 +78,7 @@
 
 .searchBox::placeholder {
   color: #bfbfbf;
-  font-family: 'ProximaNovaRegular';
+  font-family: 'ProximaNovaRegular', sans-serif;
 
 }
 
@@ -105,7 +105,7 @@
 	border-style: none;
 	background-color: #00bfff;
 	color: white;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	border-radius: 5px;
 	padding: 25px 55px;
 
@@ -162,7 +162,7 @@
 }
 
 .listingEnquire a {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	background-color: white;
 	font-size: 16px;
 	color: #00bfff;
@@ -178,7 +178,7 @@
 
 #enquireButton {
 	padding: 10px 40px;
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	background-color: white;
 	border: solid 2px #00bfff;
 	border-radius: 3px;
@@ -198,7 +198,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	font-size: 20px;
 	padding-left: 20px;
 	color: #50525E;
@@ -212,7 +212,7 @@
 
 .listingText p, 
 .listingText2 p {
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	padding-left: 20px;
 	padding-top: 10px;
 	color: #a6a6a6;
@@ -259,7 +259,7 @@
 }
 
 .feedbackText h4 {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	font-size: 16px;
 	color: #898990;
 	padding-left: 0;
@@ -269,7 +269,7 @@
 
 #noReview {
 	display: inline-block;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	font-size: 14px;
 	padding: 0px 10px;
 	font-weight: normal;
@@ -284,13 +284,13 @@
 }
 
 ..listingBlurb p {
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 
 }
 
 #reviewcount {
 	display: inline-block;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 
 }
 
@@ -313,7 +313,7 @@
 
 .lowerInfo p {
 	display: inline-block;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	color: #9A9CA4;
 }
 

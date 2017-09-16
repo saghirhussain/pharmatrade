@@ -85,7 +85,7 @@
                     <div class="feedbackPic2 align">
                         <img src="{{ review.user.userprofile.picture.url }}" class='img-responsive' />
                           <div class="feedbackText2">
-                            <p>{{ review.user.userprofile.firstname }}&nbsp;{{ review.user.userprofile.secondname }}</p>
+                            <p id="detailedUser">{{ review.user.userprofile.firstname }}&nbsp;{{ review.user.userprofile.secondname }}</p>
                             {% if review.rating == 1 %}
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>

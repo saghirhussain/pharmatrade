@@ -69,7 +69,7 @@ class CompanyDetailView(DetailView):
 
 
         if review_average is not None:
-            average_review = int(round(review_average,0))
+            average_review = float(round(review_average, 1))
         else:
             average_review = 0
             

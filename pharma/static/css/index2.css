@@ -94,6 +94,14 @@ body, html {
 	color: #8f97a3;
 }
 
+.landingpage h2 {
+	font-family: 'ProximaNovaSemiBold', sans-serif;
+	padding-left: 30%;
+	margin-top: 140px;
+	color: #00bfff;
+
+}
+
 #productLink {
 	margin-right: 100px;
 	color: #00bfff;
@@ -156,6 +164,40 @@ body, html {
 	color: white;
 }
 
+.landingPage2 {
+	height: 300px;
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.landingPage2a {
+	height: 100%;
+	width: 25%;
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 20px;
+}
+
+.landingPage2a h3,
+.landingPage2a p {
+	font-family: 'ProximaNovaRegular', sans-serif;
+	color: #737373
+	text-transform: uppercase;
+}
+
+.landingPage2a p {
+	text-transform: none;
+}
+
+.fa-thumbs-o-up,
+.fa-commenting-o,
+.fa-search {
+	display: block;
+	margin-top: 50px;
+	color: #00bfff;
+}
 
 .companyBackground {
 	height: 230px;
@@ -169,7 +211,7 @@ body, html {
 
 .companyContainer {
 	background-color: #f2f2f2;
-	min-height: 600px;
+	min-height: 100vh;
 	margin-top: -20px;
 
 }
@@ -215,6 +257,11 @@ body, html {
 .companyContact,
 .companyVerification {
 	width: 25%;
+}
+
+.companyFeedback {
+	max-height: 300px;
+    overflow-y: scroll;
 }
 
 .companyDescription h3,
@@ -363,6 +410,13 @@ body, html {
 	font-style: italic;
 	font-family: 'ProximaNovaLight';
 	color: #676E73;
+}
+
+#detailedUser {
+	font-family: 'ProximaNovaRegular', sans-serif;
+	color: #778188;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .verfication1 {
