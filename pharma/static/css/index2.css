@@ -94,12 +94,11 @@ body, html {
 	color: #8f97a3;
 }
 
-.landingpage h2 {
-	font-family: 'ProximaNovaSemiBold', sans-serif;
-	padding-left: 30%;
-	margin-top: 140px;
+.fa-angle-down {
+	display: inline-block;
+	margin-left: 50%;
+	margin-top: 130px;
 	color: #00bfff;
-
 }
 
 #productLink {
@@ -177,18 +176,19 @@ body, html {
 	width: 25%;
 	background-color: #f2f2f2;
 	text-align: center;
-	padding: 20px;
+	padding: 25px;
 }
 
 .landingPage2a h3,
 .landingPage2a p {
-	font-family: 'ProximaNovaRegular', sans-serif;
+	font-family: 'ProximaNovaRegular', 'Montserrat', sans-serif;
 	color: #737373
 	text-transform: uppercase;
 }
 
 .landingPage2a p {
 	text-transform: none;
+	color: #8c8c8c;
 }
 
 .fa-thumbs-o-up,
@@ -198,6 +198,159 @@ body, html {
 	margin-top: 50px;
 	color: #00bfff;
 }
+
+.landingPage3 {
+	height: 350px;
+	background-color: white;
+	text-align: center;
+	padding-top: 30px;
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;*/
+}
+
+.fbcarousel p,
+.fbcarousel h3 {
+	font-family: 'ProximaRegular', 'Lato', sans-serif;
+}
+
+.fbcarousel h3{
+	color: #666666;
+
+}
+
+
+.fbcarousel p {
+	color: #00bfff;
+	text-transform: uppercase;
+}
+
+.fbcarousel h3 {
+	text-transform: none;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.landingPage3 h2 {
+	font-family: 'ProximaRegular', 'Montserrat', sans-serif;
+	color: #333333
+	margin-bottom: 30px;
+}
+
+.landingPage3a {
+	height: 80%;
+	background-color: white;
+	margin:auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.fbcarousel {
+	background-color: white;
+	width: 70%;
+	text-align: center;
+	margin:auto;
+	
+}
+
+.fbcarousel img {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	border-radius: 50%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.landingPage4 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: -10px;
+	background-color: #f2f2f2;
+	padding-bottom: 50px;
+
+}
+
+.landingPage4a {
+	width: 45%;
+	padding: 20px 150px;
+
+}
+
+.landingPage4b {
+	width: 45%;
+}
+
+.landingPage4a {
+	background-color: #f2f2f2;
+
+}
+
+.landingPage4b {
+	text-align: center;
+	background-color: #f2f2f2;
+
+}
+
+.landingPage4a h3 {
+	font-family: 'ProximaRegular', 'Montserrat', sans-serif;
+	color: #00bfff;
+}
+
+.landingPage4a p {
+	line-height: 200%;
+	font-family: 'ProximaRegular', 'Lato', sans-serif;
+	font-size: 18px;
+	color: #808080;
+}
+
+.landingPage4b img {
+	display: block
+	margin-left: auto;
+	margin-top: 50px;
+
+}
+
+.Page4Heading {
+	background-color: #f2f2f2;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-align: center;
+
+}
+
+.Page4Heading h2 {
+	font-family: 'ProximaRegular', 'Lato', sans-serif;
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+.footer {
+	height: 400px;
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;*/
+}
+
+.footer1 {
+	width: 25%;
+}
+
+.footer1 h3,
+.footer1 p,
+.footer1 li {
+	font-family: 'ProximaNovaRegular', 'Lato', sans-serif;
+}
+
+
+
+
 
 .companyBackground {
 	height: 230px;
@@ -269,7 +422,7 @@ body, html {
 .companyFeedback h3,
 .companyVerification h3
  {
-	font-family: 'ProximaNovaBold', sans-serif;
+	font-family: 'ProximaNovaBold', 'Montserrat-Bold', sans-serif;
 	border-bottom: solid 1px #e6e6e6;
 	padding-bottom: 20px;
 	color: #676E73;
@@ -303,6 +456,7 @@ body, html {
 	padding-left: 10px;
 	padding-right: 10px;
 	box-shadow: 0px 10px 20px #bbc0c4;
+	text-align: center;
 }
 
 .logoBox img {
@@ -311,7 +465,7 @@ body, html {
 }
 
 .companyBackground h3 {
-	font-family: 'ProximaNovaBold', sans-serif;
+	font-family: 'ProximaNovaBold', 'Montserrat-Bold', sans-serif;
 	color: white;
 	padding-left: 500px;
 	padding-top: 100px;
@@ -321,7 +475,7 @@ body, html {
 .companyBackground a {
 	display: inline-block;
 	padding-left: 20px;
-	font-family: 'ProximaNovaLight', sans-serif;
+	font-family: 'ProximaNovaLight', 'Montserrat-Light', sans-serif;
 	color: white;
 }
 
@@ -337,7 +491,7 @@ body, html {
 }
 
 .companyBackground p {
-	font-family: 'ProximaNovaLight', sans-serif;
+	font-family: 'ProximaNovaLight', 'Montserrat-Light', sans-serif;
 	color: white;
 	display: inline-block;
 	
@@ -376,7 +530,7 @@ body, html {
 
 .contactIcon1 p {
 	display: inline-block;
-	font-family: 'ProximaNovaSemiBold', sans-serif;
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-Bold', sans-serif;
 	color: #676E73;
 }
 
@@ -389,7 +543,7 @@ body, html {
 .companyDescription p {
 	padding-top: 20px;
 	line-height: 200%;
-	font-family: 'ProximaNovaRegular', sans-serif;
+	font-family: 'ProximaNovaRegular', 'Montserrat', sans-serif;
 	color: #676E73;
 }
 
@@ -408,12 +562,12 @@ body, html {
 
 .companyFeedbackText p {
 	font-style: italic;
-	font-family: 'ProximaNovaLight';
+	font-family: 'ProximaNovaLight', 'Montserrat-Light';
 	color: #676E73;
 }
 
 #detailedUser {
-	font-family: 'ProximaNovaRegular', sans-serif;
+	font-family: 'ProximaNovaRegular', 'Montserrat', sans-serif;
 	color: #778188;
 	font-weight: bold;
 	font-size: 15px;
@@ -446,7 +600,7 @@ body, html {
 
 .verfication1 p {
 	display: inline-block;
-	font-family: 'ProximaNovaSemiBold', sans-serif;
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold', sans-serif;
 	color: #676E73;
 }
 
@@ -458,12 +612,12 @@ body, html {
 }
 
 .table-hover th {
-	font-family: 'ProximaNovaSemiBold', sans-serif;
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold', sans-serif;
 	color: #676E73;
 }
 
 .table-hover td {
-	font-family: 'ProximaNovaRegular', sans-serif;
+	font-family: 'ProximaNovaRegular', 'Montserrat', sans-serif;
 	color: #676E73;
 }
 
@@ -473,7 +627,7 @@ td a {
 }
 
 .menuRight a {
-	font-family: 'ProximaNovaSemiBold', sans-serif;
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold', sans-serif;
 	color: #676E73;
 }
 
@@ -490,13 +644,13 @@ td a {
 }
 
 #enquirySent {
-	font-family: 'ProximaNovaSemiBold', sans-serif;
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold', sans-serif;
 	color: #808080;
 	padding-left: 250px; 
 }
 
 .dropbtn {
-    font-family: 'ProximaNovaSemiBold', sans-serif;
+    font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold', sans-serif;
     color: #808080;
     padding: 16px;
     font-size: 14px;
@@ -536,7 +690,7 @@ td a {
 }
 
 #noresults {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', 'Montserrat-SemiBold';
 	color: #55575e;
 	margin-bottom: 30px;
 

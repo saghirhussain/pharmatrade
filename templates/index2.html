@@ -22,6 +22,7 @@
     
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700" rel="stylesheet">
      
     
     <!-- Custom CSS -->
@@ -53,7 +54,7 @@
     
 		{% if user.is_authenticated %}
 			{% if user.userprofile.picture %}
-				<img src='{{ user.userprofile.picture.url }}'  />
+				<img id="bannerPic" src='{{ user.userprofile.picture.url }}'  />
         <div class="dropdown">
           <p class="dropbtn">{{ user.userprofile.firstname }}</p>
           <div class="dropdown-content">
@@ -92,27 +93,98 @@
   		<input id='searchbox' type="text" name="search" value="" placeholder="What product are you looking for?">
   		<button id='landingbutton'>Search</button>
   	</form>
+    <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+  </div>
+
+  <div class="Page4Heading">
     <h2>The trusted market place for pharmaceuticals</h2>
   </div>
-  <div class="landingPage2">
-    <div class="landingPage2a">
-      <i class="fa fa-search fa-4x" aria-hidden="true"></i>
-      <h3>Thousands of products</h3>
-      <p>Buy with confidence.  We only list companies that have undergone due diligence.  We screen against a number of sources, includinng the MHRA register and Companies House</p>
+  <div class="landingPage4">
+    <div class="landingPage4a">
+      <h3>Find products</h3>
+      <p>PharmaTrade has made find a product easy.  With our search tool, you can easily search thousands of products and compare pricing from multiple suppliers</p>
     </div>
-    <div class="landingPage2a">
-      <i class="fa fa-thumbs-o-up fa-4x" aria-hidden="true"></i>
-      <h3>Verified companies</h3>
-      <p>Buy with confidence.  We only list companies that have undergone due diligence.  We screen against a number of sources, includinng the MHRA register and Companies House</p>
-    </div>
-    <div class="landingPage2a">
-      <i class="fa fa-commenting-o fa-4x" aria-hidden="true"></i>
-      <h3>Direct communication</h3>
-      <p>Buy with confidence.  We only list companies that have undergone due diligence.  We screen against a number of sources, includinng the MHRA register and Companies House</p>
+    <div class="landingPage4b">
+      <img  style="height: 130px; width: 130px; " src="{% static "img/medical.svg" %}" />
     </div>
   </div>
-  {% endblock %}
 
+  <div class="landingPage4">
+    <div class="landingPage4b">
+      <img  style="height: 130px; width: 130px;" src="{% static "img/business.svg" %}" />
+    </div>
+    <div class="landingPage4a">
+      <h3>Verified companies</h3>
+      <p>Buy with confidence.  We only list companies screened against a number of sources, includinng the MHRA register and Companies House</p>
+    </div>
+  </div>
+
+  <div class="landingPage4">
+    <div class="landingPage4a">
+      <h3>Direct communication</h3>
+      <p>We know your time is valuable, so we have made it easy for you to contact the supplier directly through PharmaTrade.</p>
+    </div>
+    <div class="landingPage4b">
+      <img  style="height: 130px; width: 130px;" src="{% static "img/multimedia.svg" %}" />
+    </div>
+  </div>
+
+  <div class="landingPage3">
+    <h2>What our customers are saying</h2>
+    <div id="myCarousel" class="carousel landingPage3a slide" data-ride="carousel">
+    <!-- Indicators -->
+    
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active fbcarousel">
+        <img style="height: 80px; width: 80px;" src="{% static "img/charles_livingstone.jpg" %}" />
+        <h3>"This is the best platform ever.  It makes my life so much easier"</h3>
+        <p>Charles, London</p>
+      </div>
+
+      <div class="item fbcarousel">
+        <img style="height: 80px; width: 80px;" src="{% static "img/hannah_chaplin.jpg" %}" />
+        <h3>"I was spending hours calling companies to find the product.  I do it minutes now."</h3>
+        <p>Hannah, Frankfurt</p>
+        
+      </div>
+    
+      <div class="item fbcarousel">
+        <img style="height: 80px; width: 80px;" src="{% static "img/samantha_jones.jpg" %}" />
+        <h3>"I have been able to focus on running my company."</h3>
+        <p>Samantha, Leeds</p>
+      </div>
+    </div>
+
+  </div>
+ 
+</div>
+
+
+  {% endblock %}
+   <div class="footer">
+     <div class="footer1">
+      <h3>About PharmaTrade</h3>
+      <p>PharmaTrade is Europe's first marketplace for Pharmaceutical Products.  We connect wholesales, traders and pharmacies across Europe, making it easy to find and purchase a range of pharmaceutical products.</p>
+    </div>
+    <div class="footer1">
+      <h3>About us</h3>
+      <ul>
+        <li>About PharmaTrade</li>
+        <li>Terms of Service</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+    <div class="footer1">
+      <h3>Contact us</h3>
+      <ul>
+        <li>By email: </li>
+        <li>Phone:</li>
+        <li>Mail:</li>
+      </ul>
+    </div>
+  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

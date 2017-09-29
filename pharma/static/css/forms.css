@@ -11,14 +11,14 @@
 
 #signInForm h3 {
 	margin-top: 50px;
-	font-family: 'ProximaNovaBold';
+	font-family: 'ProximaNovaBold', sans-serif;
 	font-size: 30px;
 
 }
 
 #signInForm p {
 	margin-bottom: 100px;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	font-size: 18px;
 	color: #8f97a3;
 }
@@ -37,7 +37,7 @@
 	background-color: #00bfff;
 	border-radius: 5px;
 	border: none;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	color: white;
 	margin-top: 20px;
 	margin-left: 290px;
@@ -71,7 +71,7 @@ input:-webkit-autofill:active {
 
 .form-group input::placeholder {
   color: #bfbfbf;
-  font-family: 'ProximaNovaRegular';
+  font-family: 'ProximaNovaRegular', sans-serif;
 }
 
 .form-group {
@@ -122,15 +122,19 @@ text-align: center;
 }
 
 .loginPic h1 {
-	font-family: 'ProximaNovaBold';
+	font-family: 'ProximaNovaBold', sans-serif;
 	font-size: 50px;
 	color: white;
 	text-align: center;
 	margin-top: 300px;
 }
 
+#signupH1 {
+	font-family: 'ProximaNovaBold', sans-serif;
+}
+
 .loginPic h3 {
-	font-family: 'ProximaNovaLight';
+	font-family: 'ProximaNovaLight', sans-serif;
 	color: white;
 	text-align: center;
 	font-size: 35px;
@@ -141,7 +145,7 @@ text-align: center;
 	margin-top: 40px;
 	display: inline-block;
 	text-decoration: none;
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	color: white;
 	text-transform: uppercase;
 	padding: 10px 50px;
@@ -194,12 +198,12 @@ text-align: center;
 }
 
 #listingForm p {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	color: #808080;
 }
 
 #listingForm button {
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 }
 
 .signupfield {
@@ -238,7 +242,7 @@ text-align: center;
 
 #listingButton {
 	font-size: 16px;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	font-weight: bold;
 	padding: 25px 50px;
 	border-radius: 5px;
@@ -267,7 +271,7 @@ text-align: center;
 
 .pharmacyBackground h2,
 .pharmacyBackground2 h2 {
-	font-family: 'ProximaNovaSemiBold';
+	font-family: 'ProximaNovaSemiBold', sans-serif;
 	color: white;
 	padding-left: 250px;
 	padding-top: 110px;
@@ -281,7 +285,7 @@ text-align: center;
 
 .formTest2 a {
 	display: inline-block;
-	font-family: 'ProximaNovaRegular';
+	font-family: 'ProximaNovaRegular', sans-serif;
 	text-decoration: none;
 	color: #00bfff;
 	margin-left: 20px;
@@ -302,6 +306,10 @@ text-align: center;
 	left: 250px;
 	top: 170px;
 	box-shadow: 0px 10px 20px #bbc0c4;
+	text-align: center;
+}
+
+.logoBox {
 	text-align: center;
 }
 
